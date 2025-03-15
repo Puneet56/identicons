@@ -21,10 +21,6 @@ defmodule Identicons do
     %Identicons.Image{image | color: {r, g, b}}
   end
 
-  def %Identicons.Image{hex: [r, g, b | _tail]} = image do
-    %Identicons.Image{image | color: {r, g, b}}
-  end
-
   def mirror_row([a, b | _tail] = row) do
     row ++ [b, a]
   end
